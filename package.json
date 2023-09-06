@@ -1,5 +1,5 @@
 {
-  "name": "release-name-generator",
+  "name": "@senordeveloper/release-name-generator",  
   "version": "1.0.0",
   "description": "generate a random release name",
   "scripts": {
