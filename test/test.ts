@@ -1,9 +1,10 @@
-﻿import ReleaseNameGenerator from "../src/generator";
-import Options from "../src/options";
+﻿import {ReleaseNameGenerator} from "../src/index";
+import {Options} from "../src/index";
 
 describe("Generate release name with defaults", () => {
     const _generator = new ReleaseNameGenerator();
     const result = _generator.generate();
+    
     it("should give a release name", () => {       
         expect(result.length).toBeGreaterThan(0);
     });

@@ -1,10 +1,10 @@
-﻿import Options from "./options";
+﻿import {Options} from "./options";
 import nouns from './words/nouns';
 import lastWords from "./words/last";
 
-export default class ReleaseNameGenerator {
+export class ReleaseNameGenerator {
 
-    defaultOptions: Options = new Options('-', 2, false, false);
+    private defaultOptions: Options = new Options('-', 2, false, false);
 
     options: Options;
 
@@ -12,7 +12,7 @@ export default class ReleaseNameGenerator {
         this.options = options ?? this.defaultOptions;
     }
 
-    getRandomInt = (max: number): number => {
+    private getRandomInt = (max: number): number => {
         return Math.floor(Math.random() * max);
     }
 

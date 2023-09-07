@@ -1,7 +1,13 @@
 {
   "name": "senordeveloper-release-name-generator",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "generate a random release name",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "module": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "yarn tsc",
     "dev": "yarn build && node ./dist/index.js",
