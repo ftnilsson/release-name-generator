@@ -1,5 +1,5 @@
-﻿import ReleaseNameGenerator from "../dist/generator";
-import Options from "../dist/options";
+﻿import {ReleaseNameGenerator} from "../src/index";
+import {Options} from "../src/index";
 
 describe("Generate release name with defaults", () => {
     const _generator = new ReleaseNameGenerator();

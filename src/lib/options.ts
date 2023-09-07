@@ -1,4 +1,4 @@
-﻿export default class Options {
+﻿export class Options {
     delimiter?: string;
     length: number;
     useToken?: boolean;
