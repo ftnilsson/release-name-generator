@@ -1,16 +1,38 @@
 {
+  "files": ["src/index.ts"],
   "compilerOptions": {
+    "target": "es2015",
+    "module": "es2015",
+    "declaration": true,
     "outDir": "./dist",
+    "noEmit": false,
     "strict": true,
-    "target": "es6",
-    "module": "commonjs",
-    "sourceMap": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
     "esModuleInterop": true,
-    "moduleResolution": "node",
-    "typeRoots": [
-      "node_modules/@types"
-    ]
-  },
-  "include": ["src/**/*"],  
-  "exclude": ["node_modules", "**/test/*"]
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
+    // "outDir": "./dist",
+    //   "strict": true,
+    //   "target": "es6",
+    //   "module": "CommonJS",
+    //   "sourceMap": true,
+    //   "esModuleInterop": true,
+    //   "moduleResolution": "node",
+    //   "typeRoots": [
+    //     "node_modules/@types"
+    //   ]    
+  }  
 }

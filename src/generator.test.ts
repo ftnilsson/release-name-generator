@@ -1,10 +1,10 @@
-﻿import {ReleaseNameGenerator} from "../src/index";
-import {Options} from "../src/index";
+﻿import { fail } from "assert";
+import rng from "./index";
 
 describe("Generate release name with defaults", () => {
-    const _generator = new ReleaseNameGenerator();
-    const result = _generator.generate();
     
+    const result = rng();
+   
     it("should give a release name", () => {       
         expect(result.length).toBeGreaterThan(0);
     });
@@ -23,8 +23,8 @@ describe("Generate release name function with delimiter='|' and length 3 and use
     const length = 3;
     const useToken = true;
     const capitalize = true;
-    const _generator = new ReleaseNameGenerator(new Options(delimiter, length, useToken, capitalize));
-    const result = _generator.generate();
+    
+    const result = rng(delimiter, length, useToken, capitalize);
     
     it("should give a release name", () => {        
         expect(result.length).toBeGreaterThan(0);
@@ -47,7 +47,10 @@ describe("Generate release name function with delimiter='|' and length 3 and use
         var split = result.split('|');
         for (var i = 0; i < split.length -1; i++){
             var word = split[i];
-            expect(isUppercase(word[0])).toBeTruthy();    
+            if(word)
+                expect(isUppercase(word[0]!)).toBeTruthy();    
+            else
+                fail();
         }        
     });    
 });
