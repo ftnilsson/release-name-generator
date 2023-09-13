@@ -7035,21 +7035,14 @@ const lastWords: string[] = [
     "zucchini"
 ];
 
-/**
- * v0.0.6
- * @param {string} delimiter - what word separator to use default '-'
- * @param {number} length - number of words to generate default '2'
- * @param {boolean} useToken - append release name with a unique string token 'false'
- * @param {boolean} capitalize - should words be capitalised default 'false'
- */
 export class AwesomeReleaseNameGenerator {
 
-    private delimiter: string = '-';
-    private length: number = 2;
-    private useToken: boolean = false;
-    private capitalize: boolean = false;
+    private delimiter = '-';
+    private length = 2;
+    private useToken = false;
+    private capitalize = false;
 
-    constructor(delimiter: string = '-', length: number = 2, useToken: boolean = false, capitalize: boolean = false) {
+    constructor(delimiter = '-', length = 2, useToken = false, capitalize = false) {
         this.delimiter = delimiter;
         this.length = length;
         this.useToken = useToken;
@@ -7067,9 +7060,9 @@ export class AwesomeReleaseNameGenerator {
         }
 
         for (let i = 0; i < this.length - 1; i++) {
-            addString(nouns[getRandomInt(nouns.length)]!);
+            addString(nouns[getRandomInt(nouns.length)]);
         }
-        addString(lastWords[getRandomInt(lastWords.length)]!);
+        addString(lastWords[getRandomInt(lastWords.length)]);
 
         const generateToken = (): string => {
             return Math.random().toString(36).substring(2);
