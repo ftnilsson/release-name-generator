@@ -1,43 +1,36 @@
 {
   "name": "awesome-release-name-generator",
-  "version": "0.0.1",
-  "description": "generate awesome release names",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "type": "module",
-  "files": [
-    "dist",
-    "LICENSE",
-    "README.md",
-    "package.json"
-  ],
-  "publishConfig": {
-    "access": "public"
+  "version": "1.0.1",
+  "description": "generate awesome release names",  
+  "scripts": {
+    "compile": "npm run lint && rm -rf dist/lib && tsc && tsc --build tsconfig.es5.json",
+    "lint": "eslint . --ext .ts",
+    "test": "jest",
+    "test:coverage": "jest --coverage"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ftnilsson/release-name-generator"
   },
-  "scripts": {
-    "build": "yarn tsc",
-    "dev": "yarn build && node ./dist/lib/index.js",
-    "test": "yarn build && jest",
-    "local": "npm pack --pack-destination ./packages"
-  },
   "keywords": [
-    "release",
-    "name",
-    "generator"
+    "release name",
+    "generator",
+    "javascript",
+    "utils",
+    "utilities"
   ],
   "author": "señor developer",
-  "license": "ISC",
-  "dependencies": {
-    "@types/node": "^18.14.0",
-    "typescript": "^4.9.5"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ftnilsson/release-name-generator/issues"
   },
-  "devDependencies": {
-    "@types/jest": "^29.5.4",
-    "jest": "^29.6.4",
-    "ts-jest": "^29.1.1"
+  "homepage": "https://github.com/ftnilsson/release-name-generator#readme",
+  "devDependencies": {   
+    "@types/jest": "^26.0.19",
+    "@typescript-eslint/eslint-plugin": "^4.11.1",
+    "@typescript-eslint/parser": "^4.11.1",       
+    "eslint": "^7.17.0",
+    "jest": "^26.6.3",  
+    "typescript": "^4.1.3"
   }
 }
