@@ -1,4 +1,4 @@
-﻿const {generate} = require("../../dist/lib/es5/core/generate");
+﻿const {generate} = require("../../dist/lib-es5");
 
 describe("Generate release name with defaults", () => {
     const result = generate();
