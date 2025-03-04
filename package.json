@@ -5,8 +5,8 @@
   "scripts": {
     "compile": "npm run lint && rm -rf dist/lib && tsc && tsc --build tsconfig.es5.json",
     "lint": "eslint . --ext .ts",
-    "test": "jest",
-    "test:coverage": "jest --coverage"
+    "test": "npm run compile && jest",
+    "test:coverage": "npm run compile && jest --coverage"
   },
   "repository": {
     "type": "git",
