@@ -1,12 +1,13 @@
 {
   "name": "awesome-release-name-generator",
-  "version": "1.0.1",
+  "version": "3.0.1",
   "description": "generate awesome release names",  
   "scripts": {
     "compile": "npm run lint && rm -rf dist/lib && tsc && tsc --build tsconfig.es5.json",
     "lint": "eslint . --ext .ts",
     "test": "npm run compile && jest",
-    "test:coverage": "npm run compile && jest --coverage"
+    "test:coverage": "npm run compile && jest --coverage",
+    "prepublishOnly": "npm run test && npm run compile"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,9 @@
     "url": "https://github.com/ftnilsson/release-name-generator/issues"
   },
   "homepage": "https://github.com/ftnilsson/release-name-generator#readme",
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "devDependencies": {   
     "@types/jest": "^29.5.5",
     "@typescript-eslint/eslint-plugin": "^4.11.1",

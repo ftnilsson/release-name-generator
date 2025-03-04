@@ -32,10 +32,10 @@ Your awesome release name
 
 ## Example usage
 
-    import releaseNameGenerator from "awesome-release-name-generator";
+    const {generate} = require("awesome-release-name-generator);
 
-    const result = releaseNameGenerator(); // using default values
+    const result = generate(); // using default values
 
     or
 
-    const result = releaseNameGenerator('-', 2, true, true); // setting specific values
+    const result = generate('-', 2, true, true); // setting specific values
