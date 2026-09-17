@@ -32,7 +32,7 @@ Your awesome release name
 
 ## Example usage
 
-    const {generate} = require("awesome-release-name-generator);
+    const {generate} = require("awesome-release-name-generator");
 
     const result = generate(); // using default values
 
